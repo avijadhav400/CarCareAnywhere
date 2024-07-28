@@ -39,4 +39,4 @@ app.post('/service', postService)
 
 app.post('/signup', postSignup)
 
-app.get('/login', getLogin)
+app.post('/login', getLogin)

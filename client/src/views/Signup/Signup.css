@@ -1,0 +1,34 @@
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .signup-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  .text-center {
+    margin-top: 10px;
+  }
+  
+  .text-center a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+  

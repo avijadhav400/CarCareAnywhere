@@ -1,0 +1,26 @@
+body {
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .login-container {
+    width: 300px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
+  
+  .btn-primary {
+    border-radius: 0;
+  }
+  
