@@ -21,6 +21,10 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <Signup />,
   },
+  {
+    path: "*",
+    element: <h1>Not Found</h1>,
+  },
 ]);
 
 root.render(<RouterProvider router={router} />);
