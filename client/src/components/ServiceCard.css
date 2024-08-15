@@ -1,0 +1,44 @@
+.service-card {
+    border: 1px solid black;
+    height: 350px;
+    width: 250px;
+    text-align: center;
+    height: auto;
+  }
+  
+  
+  .service-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .service-card-img {
+    width: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 400px) {
+      .service-card {
+        width: 100%;
+      }
+    }
+    
+    @media screen and (min-width: 401px) and (max-width: 600px) {
+      
+    
+      .service-card {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+    
+    @media screen and (min-width: 601px) {
+      
+    
+      .service-card {
+        flex: 0 1 calc(33.333% - 2rem);
+        max-width: calc(33.333% - 2rem);
+      }
+    }
+  

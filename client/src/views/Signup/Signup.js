@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
+import { Link } from "react-router-dom";
 import toast, {Toaster} from 'react-hot-toast'
 import "./Signup.css";
 
@@ -70,7 +71,7 @@ function Signup() {
             </button>
           </div>
           <div className="text-center">
-            <a href="/login">Already have an account? Login</a>
+            <Link to="/login">Already have an account? Login</Link>
           </div>
         </form>
       </div>

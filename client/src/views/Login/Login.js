@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import toast, {Toaster} from 'react-hot-toast'
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 import './Login.css';
 
@@ -58,7 +59,7 @@ const Login = () => {
           <a href='https://google.com'>Forgot Password?</a>
         </div>
         <div className="text-center">
-            <a href="/signup">Don't have an account? Signup</a>
+            <Link to="/signup">Don't have an account? Signup</Link>
           </div>
       </form>
       <Toaster/>
