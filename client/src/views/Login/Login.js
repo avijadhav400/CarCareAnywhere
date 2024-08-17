@@ -20,8 +20,8 @@ const Login = () => {
       localStorage.setItem('currentUser', JSON.stringify(response.data.data))
       toast.loading("Redirecting to home")
       setTimeout(() => {
-        window.location.href = '/'
-      }, 1500);
+      }, 2000);
+      window.location.href = '/'
     }else{
       toast.error(response.data.message)
     }

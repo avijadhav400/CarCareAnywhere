@@ -18,6 +18,7 @@ function Signup() {
 
     if(response.data.success){
       toast.success(response.data.message)
+      window.location.href = '/'
     }else{
       toast.error(response.data.message)
     }

@@ -21,6 +21,12 @@ function HomePage() {
           <li className="nav-item">CONTACT</li>
           <li className="nav-item">OUR SERVICES</li>
           <li className="nav-item">ABOUT US</li>
+          <li className="nav-item" 
+          onClick={()=>{window.location.href = '/login'}}
+          >LOGIN</li>
+          <li className="nav-item"
+          onClick={()=>{window.location.href = '/signup'}}
+          >SIGNUP</li>
         </ul>
       </nav>
 
