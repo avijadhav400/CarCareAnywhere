@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./HomePage.css";
 import ServiceCard from "../../components/ServiceCard.js";
 import TiresAndWheelsImg from "./tires-and-wheels.jpg";
@@ -33,7 +34,11 @@ function HomePage() {
       <main className="main-container">
         <h1 className="headings">WE GIVE YOUR CAR</h1>
         <h1 className="headings">A FRESH LOOK</h1>
-        <button type="button" className="btn btn-primary mt-3">
+        <button 
+        type="button" 
+        className="btn btn-primary mt-3"
+        onClick={()=>{window.location.href = '/add-service'}}
+        >
           CHOOSE A SERVICE
         </button>
       </main>
@@ -71,9 +76,15 @@ function HomePage() {
           image={ElectricalWorksImg}
         />
       </services>
-      <footer>
-        <h1>footer</h1>
-      </footer>
+      <header className="bg-primary text-white text-center py-5">
+        <div className="container">
+          <h1>Car Care Anywhere</h1>
+          <p>Convenient and reliable car service right at your doorstep.</p>
+          <Link to="/find-mechanics" className="btn btn-light btn-lg mt-3">
+            Find Nearby Mechanics
+          </Link>
+        </div>
+      </header>
     </>
   );
 }
