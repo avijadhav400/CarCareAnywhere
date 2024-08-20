@@ -34,25 +34,21 @@ const getLogin = async(req, res)=>{
             password: password
         })
         
-        if(user){
-            res.json({
-                success: true,
-                message: 'Login successfully',
-                data: user
-            })
-        }
-        else{
+        if(!user){
             res.json({
                 success: false,
-                message: 'Invalid Credentials',
-                data: null
+                message: 'Invalid Credentials'
             })
         }
+        else{res.json({
+            success: true,
+            message: 'Login successfully',
+            data: user
+        })}
     } catch (error) {
         res.json({
             success: false,
             message: error.message,
-            data: null
         })
     }
 

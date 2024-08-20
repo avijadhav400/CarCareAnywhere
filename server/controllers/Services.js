@@ -1,13 +1,13 @@
 import Service from "../models/Service.js";
 
 const postService = async(req, res) => {
-  const { name, email, carModel, serviceType, user, date } = req.body;
+  const { name, email, modelName, issue, user, date } = req.body;
 
   const service = new Service({
     name: name,
     email: email,
-    carModel: carModel,
-    serviceType: serviceType,
+    modelName: modelName,
+    issue: issue,
     user: user,
     date: new Date(date),
   });

@@ -9,11 +9,11 @@ const serviceSchema = new Schema({
     type: String,
     required: true,
   },
-  carModel: {
+  modelName: {
     type: String,
     required: true,
   },
-  serviceType: {
+  issue: {
     type: String,
   },
   user: {

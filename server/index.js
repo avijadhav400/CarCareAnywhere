@@ -35,7 +35,7 @@ app.get('/', (req, res)=>{
     })
 })
 
-app.post('/service', postService)
+app.post('/add-service', postService)
 
 app.post('/signup', postSignup)
 
