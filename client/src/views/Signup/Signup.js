@@ -23,12 +23,16 @@ function Signup() {
       toast.error(response.data.message)
     }
   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signup();
+  };
 
   return (
     <div>
       <div className="signup-container">
         <h2 className="text-center">Sign Up</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               type="text"
@@ -64,7 +68,7 @@ function Signup() {
 
           <div className="form-group">
             <button
-              type="submit"
+              type="button"
               className="btn btn-primary btn-block"
               onClick={signup}
             >
