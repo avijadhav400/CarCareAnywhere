@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import toast, {Toaster} from 'react-hot-toast'
+import toast, { Toaster } from "react-hot-toast";
 import "./HomePage.css";
 import ServiceCard from "../../components/ServiceCard.js";
 import TiresAndWheelsImg from "./tires-and-wheels.jpg";
@@ -9,17 +9,16 @@ import AutoDiagnosticsImg from "./autodiagnostics.jpg";
 import ElectricalWorksImg from "./electrical-works.jpg";
 
 function HomePage() {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState("");
 
-  useEffect(()=>{
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
-    if(currentUser){
-      setUser(currentUser)
+  useEffect(() => {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+      setUser(currentUser);
+    } else {
+      window.location.href = "/login";
     }
-    else{
-      window.location.href = '/login'
-    }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -29,7 +28,7 @@ function HomePage() {
           src="https://shremp.templines.org/wp-content/uploads/2018/02/newlogo04.png"
           alt=""
         />
-        
+
         <ul className="nav-menu">
           <li className="nav-item">Home</li>
           <li className="nav-item">Contact</li>
@@ -51,20 +50,20 @@ function HomePage() {
           >
             Signup
           </li>
-          <button 
-          type="button" 
-          class="btn btn-primary" 
-          style={{listStyleType: 'none'}}
-          onClick={() => {
-            localStorage.clear();
-            setTimeout(() => {
-              window.location.href = "/login";
-            }, 1000);
-  
-            toast.success("Logged out successfully");
-          }}
-          >LOGOUT
+          <button
+            type="button"
+            class="btn btn-primary"
+            style={{ listStyleType: "none" }}
+            onClick={() => {
+              localStorage.clear();
+              setTimeout(() => {
+                window.location.href = "/login";
+              }, 1000);
 
+              toast.success("Logged out successfully");
+            }}
+          >
+            LOGOUT
           </button>
         </ul>
       </nav>
@@ -72,15 +71,10 @@ function HomePage() {
       <main className="main-container">
         <h1 className="headings">WE GIVE YOUR CAR</h1>
         <h1 className="headings">A FRESH LOOK</h1>
-        <button
-          type="button"
-          className="btn btn-primary mt-3"
-          onClick={() => {
-            window.location.href = "/add-service";
-          }}
-        >
+
+        <Link to="/add-service" className="btn btn-primary mt-3">
           CHOOSE A SERVICE
-        </button>
+        </Link>
       </main>
 
       <services className="service-container d-flex justify-content-evenly">
@@ -126,7 +120,7 @@ function HomePage() {
           </Link>
         </div>
       </header>
-      <Toaster/>
+      <Toaster />
     </>
   );
 }
